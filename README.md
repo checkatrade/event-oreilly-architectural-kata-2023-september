@@ -2,7 +2,7 @@
 
 This is the Team Checkatrade submission for the [O'Reilly Architectural Kata 2023](https://learning.oreilly.com/live-events/architectural-katas-fall-2023/0636920097709/).
 
-View our submission on [GitHub Pages](https://expert-adventure-35lvme8.pages.github.io/).
+View our submission on [GitHub Pages](https://congenial-adventure-8krl2ek.pages.github.io/).
 
 [Kata Info & Resources](event/event.md)
 
