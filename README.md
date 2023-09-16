@@ -40,17 +40,6 @@ The [brief](event/kata-brief.md) is to create an architecture for a travel dashb
 
 > **Note:** All wireframe and diagram `.png` files can be viewed normally, but also have `Excalidraw` metadata embedded, and so can be imported back into Excalidraw and viewed/re-edited in their *original vector form*.
 
-#### UI Wireframes
-
-We made UI wireframes to help visualise the view of the system from our Traveller user's perspective, and sanity-check our pre-conceptions of interactions and flows.
-
-| Thumbnail | Title | Description |
-|-----------|-------|-------------|
-| [![image Login Screen (.excalidraw.png)](/images/wireframes/ui-login.excalidraw.png)](/images/wireframes/ui-login.excalidraw.png)       | [Login](/images/wireframes/ui-login.excalidraw.png) | We offer multiple means of login, including common Login providers, and integration with native biometric methods. We are also up front with our terms and privacy information, respecting GDPR. |
-| [![image Manage Trip Screen (.excalidraw.png)](/images/wireframes/ui-manage-trip.excalidraw.png)](/images/wireframes/ui-manage-trip.excalidraw.png)       | [Manage Trip](/images/wireframes/ui-manage-trip.excalidraw.png) | Our "main screen" allows the user to manage their trips. Trip parts can be added and removed. Adding a new part, such as a flight, takes you to the next screen to provide details. There are links to help options, and the EoY report can be downloaded. The overall Trip can be shared, either privately or via Social Media. |
-| [![image Add Flight Screen (.excalidraw.png)](/images/wireframes/ui-add-flight.excalidraw.png)](/images/wireframes/ui-add-flight.excalidraw.png)       | [Add Flight](/images/wireframes/ui-add-flight.excalidraw.png) | This screen allows you to enter a Booking code. There is also the option to connect an Email account, which we then sync incoming emails with to look for new or updated bookings.
-| [![image Manage Emails Screen (.excalidraw.png)](/images/wireframes/ui-manage-emails.excalidraw.png)](/images/wireframes/ui-manage-emails.excalidraw.png)       | [Manage Emails](/images/wireframes/ui-manage-emails.excalidraw.png) | Similar to the previous screen, you can manage your Email account connections from an "Account" area. Connecting or disconnecting them. |
-
 #### Diagrams
 
 | Thumbnail | Title | Description |
@@ -61,6 +50,17 @@ We made UI wireframes to help visualise the view of the system from our Travelle
 | [![image Trip Dashboard Diagram (.excalidraw.png)](/images/diagrams/dashboard.excalidraw.png)](/images/diagrams/dashboard.excalidraw.png)       | [Trip Dashboard Diagram](/images/diagrams/dashboard.excalidraw.png) | The Dashboard API is  largely a "Backend For Front-End", supporting the app integration with the wider system, and event bus. Booking codes may come from the app or emails, and so be received or sent by the Dashboard. The Dashboard listens to Trip Updated events, where it updates the Trips in the app accordingly. It has a document database as per [003 Streaming Database](solution/adrs/003-streaming-database.md) to cache and stream this application data. |
 | [![image Travel Agent Interface Diagram (.excalidraw.png)](/images/diagrams/interface.excalidraw.png)](/images/diagrams/interface.excalidraw.png)       | [Travel Agent Integration Diagram](/images/diagrams/interface.excalidraw.png) | The Travel Agent Integration Interface is a unified abstraction over multiple external integration implementations. This connects to different agencies and systems, registering and unregistering callbacks accordingly. It maintains a list of booking codes that our users are interested in. It shares detailed incoming trip information, which will be picked up by the Trip Aggregator. |
 | [![image Flow Diagram (.excalidraw.png)](/images/diagrams/flow.excalidraw.png)](/images/diagrams/flow.excalidraw.png)       | [Flow Diagram](/images/diagrams/flow.excalidraw.png) | A representation of the process flow when either new booking codes arrive in emails, or the user enters them manually. |
+
+#### UI Wireframes
+
+We made UI wireframes to help visualise the view of the system from our Traveller user's perspective, and sanity-check our pre-conceptions of interactions and flows.
+
+| Thumbnail | Title | Description |
+|-----------|-------|-------------|
+| [![image Login Screen (.excalidraw.png)](/images/wireframes/ui-login.excalidraw.png)](/images/wireframes/ui-login.excalidraw.png)       | [Login](/images/wireframes/ui-login.excalidraw.png) | We offer multiple means of login, including common Login providers, and integration with native biometric methods. We are also up front with our terms and privacy information, respecting GDPR. |
+| [![image Manage Trip Screen (.excalidraw.png)](/images/wireframes/ui-manage-trip.excalidraw.png)](/images/wireframes/ui-manage-trip.excalidraw.png)       | [Manage Trip](/images/wireframes/ui-manage-trip.excalidraw.png) | Our "main screen" allows the user to manage their trips. Trip parts can be added and removed. Adding a new part, such as a flight, takes you to the next screen to provide details. There are links to help options, and the EoY report can be downloaded. The overall Trip can be shared, either privately or via Social Media. |
+| [![image Add Flight Screen (.excalidraw.png)](/images/wireframes/ui-add-flight.excalidraw.png)](/images/wireframes/ui-add-flight.excalidraw.png)       | [Add Flight](/images/wireframes/ui-add-flight.excalidraw.png) | This screen allows you to enter a Booking code. There is also the option to connect an Email account, which we then sync incoming emails with to look for new or updated bookings.
+| [![image Manage Emails Screen (.excalidraw.png)](/images/wireframes/ui-manage-emails.excalidraw.png)](/images/wireframes/ui-manage-emails.excalidraw.png)       | [Manage Emails](/images/wireframes/ui-manage-emails.excalidraw.png) | Similar to the previous screen, you can manage your Email account connections from an "Account" area. Connecting or disconnecting them. |
 
 #### ADRs
 
